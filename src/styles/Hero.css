@@ -1,0 +1,47 @@
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #0e1013;
+    color: white;
+    text-align: center;
+  }
+  
+  .hero-content {
+    position: relative;
+  }
+  
+  .hero-image img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 4px solid #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  }
+  
+  .hero-name {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2rem;
+    max-width: 480px;
+    margin: 60px auto;
+  }
+  
+  .cursor {
+    display: inline-block;
+    margin-left: 5px;
+    opacity: 1;
+    animation: blink 0.7s infinite;
+  }
+  
+  @keyframes blink {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+  

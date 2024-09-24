@@ -1,0 +1,26 @@
+.home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .home section {
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 40px;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .home section {
+      padding: 0 20px;
+    }
+  }
+  
+  @media (min-width: 769px) {
+    .home {
+      padding: 0 40px;
+    }
+  }
+  
