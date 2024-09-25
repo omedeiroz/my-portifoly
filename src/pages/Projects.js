@@ -10,12 +10,14 @@ const projects = [
     description: 'Um site para treinar e testar o quão rápido e eficiente você consegue digitar um texto.',
     image: typingTestPhoto, 
     techStack: 'HTML, CSS e JS',
+    url: 'https://github.com/medeirosdevv/typing-test',
   },
   {
     title: 'Valorantdle',
     description: 'Inspirado em loldle.com. Nesse site você deve adivinhar qual é o personagem do jogo Valorant.',
     image: valorantdle, 
     techStack: 'React',
+    url: 'https://github.com/medeirosdevv/valorantdle',
   },
 ];
 
@@ -26,10 +28,12 @@ const Projects = () => {
       <div className="projects-grid">
         {projects.map((project, index) => (
           <div className="project-card" key={index}>
-            <div
-              className="project-image"
-              style={{ backgroundImage: `url(${project.image})` }}
-            ></div>
+            <a href={`${project.url}`} target="_blank" rel="noopener noreferrer">
+              <div
+                className="project-image"
+                style={{ backgroundImage: `url(${project.image})` }}
+              ></div>
+            </a>
             <div className="project-info">
               <h3>{project.title}</h3>
               <p>{project.description}</p>
