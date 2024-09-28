@@ -44,4 +44,22 @@
       opacity: 0;
     }
   }
+
+  @media (max-width: 768px) {
+    
+  }
   
+  @media (min-width: 769px) {
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 60vh;
+      background-color: #0e1013;
+      color: white;
+      text-align: center;
+      padding-top: 50px;
+    }
+
+  }

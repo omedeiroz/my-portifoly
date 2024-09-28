@@ -10,20 +10,20 @@ const projects = [
     description: 'Um site para treinar e testar o quão rápido e eficiente você consegue digitar um texto.',
     image: typingTestPhoto, 
     techStack: 'HTML, CSS e JS',
-    url: 'https://github.com/medeirosdevv/typing-test',
+    url: 'https://medeirosdevv.github.io/typing-test/',
   },
   {
     title: 'Valorantdle',
     description: 'Inspirado em loldle.com. Nesse site você deve adivinhar qual é o personagem do jogo Valorant.',
     image: valorantdle, 
     techStack: 'React',
-    url: 'https://github.com/medeirosdevv/valorantdle',
+    url: 'https://valorantdle.vercel.app/',
   },
 ];
 
 const Projects = () => {
   return (
-    <section className="projects-section">
+    <section id="projects" className="projects-section">
       <h2>Meus Projetos</h2>
       <div className="projects-grid">
         {projects.map((project, index) => (
@@ -38,10 +38,12 @@ const Projects = () => {
               <h3>{project.title}</h3>
               <p>{project.description}</p>
             </div>
-            <div className="project-details">
-              <h4>Tecnologias Utilizadas:</h4>
-              <p>{project.techStack}</p>
-            </div>
+            <a href={`${project.url}`} target="_blank" rel="noopener noreferrer" className="link-project">
+              <div className="project-details">
+                <h4>Tecnologias Utilizadas:</h4>
+                <p>{project.techStack}</p>
+              </div>
+            </a>
           </div>
         ))}
       </div>
