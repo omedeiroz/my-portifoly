@@ -10,7 +10,7 @@ const projects = [
     description: 'Um site para treinar e testar o quão rápido e eficiente você consegue digitar um texto.',
     image: typingTestPhoto, 
     techStack: 'HTML, CSS e JS',
-    url: 'https://medeirosdevv.github.io/typing-test/',
+    url: 'https://typing-test-phi-puce.vercel.app/',
   },
   {
     title: 'Valorantdle',
