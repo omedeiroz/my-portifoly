@@ -17,7 +17,7 @@ const projects = [
     description: 'Inspirado em loldle.com. Nesse site você deve adivinhar qual é o personagem do jogo Valorant.',
     image: valorantdle, 
     techStack: 'React',
-    url: 'https://valorantdle.vercel.app/',
+    url: 'https://valorant-dle.vercel.app/',
   },
 ];
 
