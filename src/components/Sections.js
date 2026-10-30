@@ -95,9 +95,15 @@ export const Contact = () => (
   <section className="section section--alt contact" id="contato">
     <div className="section-inner">
       <h2>Vamos conversar</h2>
-      <p>Tem um projeto, uma vaga ou uma ideia em mente? Me chama no LinkedIn ou dá uma olhada no meu código no GitHub.</p>
+      <p>Tem um projeto, uma vaga ou uma ideia em mente? Me manda um e&#8209;mail ou me chama no LinkedIn.</p>
+      <a className="contact-email" href={`mailto:${links.email}`}>
+        {links.email}
+      </a>
       <div className="hero-actions">
-        <a className="button button--primary" href={links.linkedin} target="_blank" rel="noopener noreferrer">
+        <a className="button button--primary" href={`mailto:${links.email}`}>
+          Enviar e-mail
+        </a>
+        <a className="button" href={links.linkedin} target="_blank" rel="noopener noreferrer">
           LinkedIn
         </a>
         <a className="button" href={links.github} target="_blank" rel="noopener noreferrer">
