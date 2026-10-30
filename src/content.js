@@ -4,6 +4,7 @@ import valorantdle from './assets/valorantdle.png';
 // Todo o texto do site fica aqui, para editar sem mexer nos componentes.
 
 export const links = {
+  email: 'contato.medeirosart@gmail.com',
   github: 'https://github.com/omedeiroz',
   linkedin: 'https://www.linkedin.com/in/arthur-medeiros-7582a7290/',
 };

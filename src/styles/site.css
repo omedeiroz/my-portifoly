@@ -453,6 +453,20 @@ a {
   margin-bottom: 20px;
 }
 
+.contact-email {
+  display: inline-block;
+  margin-top: 20px;
+  font-family: var(--display);
+  font-size: clamp(1.4rem, 4vw, 2.2rem);
+  text-decoration-color: var(--fletch);
+  text-underline-offset: 6px;
+  overflow-wrap: anywhere;
+}
+
+.contact-email:hover {
+  color: var(--brass);
+}
+
 /* Rodapé */
 
 .footer {
