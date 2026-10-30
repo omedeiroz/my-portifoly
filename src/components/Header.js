@@ -1,17 +1,29 @@
 import React from 'react';
-import '../styles/Header.css';
 
-const Header = () => {
-  return (
-    <header className="header">
-      <nav className="nav">
+const nav = [
+  { href: '#sobre', label: 'Sobre' },
+  { href: '#experiencia', label: 'Experiência' },
+  { href: '#projetos', label: 'Projetos' },
+  { href: '#contato', label: 'Contato' },
+];
+
+const Header = () => (
+  <header className="header">
+    <div className="header-inner">
+      <a className="header-name" href="#inicio">
+        Arthur Medeiros
+      </a>
+      <nav aria-label="Seções">
         <ul>
-          <li><a href="#about">Sobre</a></li>
-          <li><a href="#projects">Projetos</a></li>
+          {nav.map((item) => (
+            <li key={item.href}>
+              <a href={item.href}>{item.label}</a>
+            </li>
+          ))}
         </ul>
       </nav>
-    </header>
-  );
-};
+    </div>
+  </header>
+);
 
 export default Header;
