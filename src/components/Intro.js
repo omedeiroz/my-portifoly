@@ -1,5 +1,6 @@
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import '../styles/Intro.css';
+import { pine, rnd } from './forest';
 
 // Linha do tempo da animação (ms)
 const T_DRAW0 = 700; // começa a puxar a corda
@@ -16,10 +17,6 @@ const lerp = (a, b, k) => a + (b - a) * k;
 const prog = (t, a, b) => clamp((t - a) / (b - a), 0, 1);
 const easeOutCubic = (x) => 1 - Math.pow(1 - x, 3);
 const easeInOutCubic = (x) => (x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2);
-const rnd = (i, k) => {
-  const x = Math.sin(i * 127.1 + k * 311.7) * 43758.5453;
-  return x - Math.floor(x);
-};
 
 function layout(w, h) {
   const portrait = h > w;
@@ -30,23 +27,6 @@ function layout(w, h) {
   const aimY = groundY - 152 * s;
   const r = Math.max(38 * s, 22);
   return { s, groundY, archerX, targetX, aimY, r };
-}
-
-function pine(x, base, hgt, wid) {
-  const tiers = [
-    [1, 0.55, 0.3],
-    [0.8, 0.3, 0.42],
-    [0.58, 0.08, 0.5],
-  ];
-  let d = '';
-  tiers.forEach(([top, bot, hw]) => {
-    const yt = base - hgt * top;
-    const yb = base - hgt * bot;
-    d += `M${x},${yt} L${x + wid * hw},${yb} L${x - wid * hw},${yb} Z `;
-  });
-  const tw = wid * 0.06;
-  d += `M${x - tw},${base - hgt * 0.1} L${x + tw},${base - hgt * 0.1} L${x + tw},${base} L${x - tw},${base} Z`;
-  return d;
 }
 
 function Arrow() {
